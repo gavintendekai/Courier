@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maspa Courier - UK's trusted courier and parcel delivery service. Same-day courier, next-day delivery, express shipping, and international parcel services. Fast, reliable, affordable courier company serving all UK cities.">
+    <meta name="description" content="Maspa Courier - UK's trusted courier and parcel delivery service. Same-day courier, next-day delivery, and express shipping. Fast, reliable, affordable courier company serving all UK cities.">
     <meta name="keywords" content="courier, courier service, courier UK, parcel delivery, same-day courier, next-day delivery, express courier, package delivery, courier company, delivery service, parcel courier, UK courier, local courier, nationwide delivery, courier near me, cheap courier, fast delivery, express delivery, business courier, document delivery">
     <meta name="author" content="Maspa Courier">
     <meta name="robots" content="index, follow">
@@ -48,7 +48,7 @@
             "@type": "Country",
             "name": "United Kingdom"
         },
-        "serviceType": ["Same-Day Courier", "Next-Day Delivery", "Express Shipping", "International Courier", "Parcel Delivery"],
+        "serviceType": ["Same-Day Courier", "Next-Day Delivery", "Express Shipping", "Parcel Delivery"],
         "priceRange": "££"
     }
     </script>
@@ -81,13 +81,6 @@
                         "@type": "Service",
                         "name": "Next-Day Delivery"
                     }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "International Shipping"
-                    }
                 }
             ]
         }
@@ -95,6 +88,16 @@
     </script>
 </head>
 <body>
+    <!-- Driver Recruitment Popup -->
+    <div id="driverPopup" class="driver-popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeDriverPopup()">&times;</button>
+            <h3>Van Owner Drivers Wanted</h3>
+            <p>Own a van? Join Maspa and earn competitive rates with flexible hours!</p>
+            <a href="#drivers" class="btn-primary" onclick="closeDriverPopup()">Learn More</a>
+        </div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="container">
@@ -121,6 +124,24 @@
         </div>
     </section>
 
+    <section id="drivers" class="drivers">
+        <div class="container">
+            <h2 class="section-title">Van Owner Drivers Wanted</h2>
+            <div class="drivers-content">
+                <div class="drivers-text">
+                    <p>Own a van? Join the Maspa team and grow your income with flexible delivery work across the UK.</p>
+                    <ul class="drivers-benefits">
+                        <li>Flexible working hours</li>
+                        <li>Competitive rates per delivery</li>
+                        <li>Weekly payments</li>
+                        <li>Work in your local area</li>
+                    </ul>
+                    <a href="https://wa.me/447930507727?text=Hi%2C%20I%27m%20interested%20in%20becoming%20a%20van%20owner%20driver%20for%20Maspa." class="btn-whatsapp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Contact us through WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Our Courier Services</h2>
@@ -139,11 +160,6 @@
                     <div class="icon">📋</div>
                     <h3>Parcel Tracking</h3>
                     <p>Track your courier delivery in real-time with our advanced package tracking system.</p>
-                </article>
-                <article class="service-card">
-                    <div class="icon">🌍</div>
-                    <h3>International Courier</h3>
-                    <p>Worldwide parcel delivery with trusted international courier partnerships and customs support.</p>
                 </article>
             </div>
         </div>
@@ -187,5 +203,30 @@
             <p>UK Courier Service | Email: info@maspa.com | Phone: (555) 123-4567</p>
         </div>
     </footer>
+
+    <script>
+        // Driver Recruitment Popup
+        function closeDriverPopup() {
+            const popup = document.getElementById('driverPopup');
+            popup.classList.add('closing');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 300);
+        }
+
+        // Show popup after 2 seconds, auto-close after 6 seconds
+        setTimeout(() => {
+            const popup = document.getElementById('driverPopup');
+            popup.style.display = 'flex';
+            popup.classList.add('show');
+
+            // Auto-close after 6 seconds
+            setTimeout(() => {
+                if (popup.style.display === 'flex' && !popup.classList.contains('closing')) {
+                    closeDriverPopup();
+                }
+            }, 6000);
+        }, 2000);
+    </script>
 </body>
 </html>
