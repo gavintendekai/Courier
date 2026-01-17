@@ -1,0 +1,8 @@
+# Robots.txt for Maspa Courier
+# https://maspa.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://maspa.com/sitemap.xml
